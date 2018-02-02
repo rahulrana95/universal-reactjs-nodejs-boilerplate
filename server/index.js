@@ -15,9 +15,8 @@ app.use(webpackMiddleware(compiler,{
 }));
 
 app.use(webpackHotMiddleware(compiler));
-
 app.get('/*', (request, response) => {
-  response.sendFile(path.join(__dirname,'./index.html'));
+  response.sendFile(path.join(__dirname,'../public/index.html'));
 });
 
 
