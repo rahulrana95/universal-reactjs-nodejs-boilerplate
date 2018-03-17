@@ -1,19 +1,25 @@
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports ={
   entry : [
     path.join(__dirname,'client/index.js'),
-    'webpack-hot-middleware/client'
+    'webpack-hot-middleware/client',
+    'react-hot-loader/patch' // activate HMR for React
+
   ],
 
   output: {
     path: path.join(__dirname, 'build'),
     publicPath: '/',
-    filename:'bundle.js'
+    filename:'bundle.js',
+    hotUpdateChunkFilename: 'hot/hot-update.js',
+    hotUpdateMainFilename: 'hot/hot-update.json'
   },
   plugins:[
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   module:{
@@ -30,6 +36,6 @@ module.exports ={
           ]
   },
   resolve: {
-    extensions : ['.js']
+    extensions : ['.js','.css']
   }
 }
