@@ -2,7 +2,7 @@
   "name": "projectx",
   "version": "1.0.0",
   "description": "",
-  "author":"Rahul Rana <3rahul4@gmail.com>"
+  "author":"Rahul Rana <3rahul4@gmail.com>",
   "main": "index.js",
   "engines": {
     "node": "8.0.0"
