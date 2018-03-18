@@ -30,7 +30,9 @@ module.exports ={
         NODE_ENV: JSON.stringify('production')
       }
     }),
-		new UglifyJSPlugin(),
+		new UglifyJSPlugin({
+       sourceMap: true
+     }),
 		new ManifestPlugin({
 			fileName: 'asset-manifest.json'
 		})
