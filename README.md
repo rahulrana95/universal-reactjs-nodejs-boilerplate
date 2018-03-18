@@ -10,7 +10,7 @@ Result of revisiting to webpack basics :blush:
 
 * **Clone this repo**
 * Run **npm/yarn run start (to run in development mode)**
-  Run **npm/yarn run start (to run in production mode)**
+  Run **npm/yarn run startProd (to run in production mode)**
 * Go to `http://localhost:3333`
 
 ### Features
