@@ -5,6 +5,7 @@ class App extends React.Component {
     return (
       <div className="bgColorGreen">
         <h1 className="heading">Component 3</h1>
+        Bang Bang Kart
       </div>
     );
   }
