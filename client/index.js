@@ -4,4 +4,8 @@ import App from './components/App';
 
 render(<App />,document.getElementById("app"));
 
-module.hot.accept();
+if(module.hot !== undefined){
+    console.log(module);
+    module.hot.accept();
+}
+
