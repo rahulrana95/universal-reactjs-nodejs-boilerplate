@@ -6,8 +6,6 @@ import App from './components/App';
 
 render(<RouterConfig />,document.getElementById("app"));
 
-  if (module.hot){
+  if (module.hot !== undefined){
      module.hot.accept();
-     console.log('module hot.........');
-
   }

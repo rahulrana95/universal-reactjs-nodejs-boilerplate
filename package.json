@@ -2,7 +2,7 @@
   "name": "projectx",
   "version": "1.0.0",
   "description": "",
-  "author":"Rahul Rana <3rahul4@gmail.com>",
+  "author": "",
   "main": "index.js",
   "engines": {
     "node": "8.0.0"
@@ -10,12 +10,11 @@
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
     "buildDev": "webpack --config webpack.config.dev.js",
-    "start": "mode=DEV nodemon --watch server  --exec babel-node  server/index.js",
-    "startProd": "mode=PROD  nodemon --watch server  --exec babel-node  server/index.js",
+    "start": "mode=DEVELOPMENT nodemon --watch server  --exec babel-node  server/index.js",
+    "startProd": "mode=PRODUCTION  nodemon --watch server  --exec babel-node  server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
