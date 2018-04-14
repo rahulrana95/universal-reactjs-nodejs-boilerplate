@@ -1,15 +1,14 @@
 import React from 'react';
+import LoginSignup from './LoginSignup/LoginSignup';
 class App extends React.Component {
-  	data = () => {
-  		return (<div>Hi</div>);
-  	}
   render(){
 
 
     return (
       <div className="bgColorGreen">
-      	<button>Hello MR X Y</button>
+      	<button>Hello Rana</button>
         <h1 className="heading"> Rana</h1>
+        <LoginSignup/>
       </div>
     );
   }

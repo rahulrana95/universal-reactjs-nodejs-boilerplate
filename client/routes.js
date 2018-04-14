@@ -1,15 +1,18 @@
 import React from 'react';
-import { Provider } from 'redux';
+import store from './store.js';
+import { Provider } from 'react-redux';
 import { Router, Route, browserHistory,IndexRoute } from 'react-router';
-import App from './components/App';
 import { createStore, combineReducers } from 'redux';
 
+import App from './components/App';
+
+
 let RouterConfig = () =>
-<Router history={browserHistory}  >
-  <Route path="/" component={App}>
-
-  </Route>
-</Router>
-
+<Provider store={store}>
+  <Router history={browserHistory}  >
+    <Route path="/" component={App}>
+    </Route>
+  </Router>
+</Provider>
 
 module.exports = RouterConfig;
