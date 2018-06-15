@@ -8,10 +8,12 @@
     "node": "8.0.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.prod.js",
-    "buildDev": "webpack --config webpack.config.dev.js",
+    "prod-build": "webpack --config webpack.config.prod.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js client/*.js",
+    "eslint-fix": "./node_modules/eslint/bin/eslint.js client/*.js --fix",
+    "dev-build": "webpack --config webpack.config.dev.js",
     "start": "mode=DEVELOPMENT nodemon --watch server  --exec babel-node  server/index.js",
-    "startProd": "mode=PRODUCTION  nodemon --watch server  --exec babel-node  server/index.js",
+    "start-prod": "mode=PRODUCTION  nodemon --watch server  --exec babel-node  server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -40,7 +42,7 @@
     "errorhandler": "^1.5.0",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react": "^7.9.1",
     "express-debug": "^1.1.1",
     "file-loader": "^1.1.11",
     "helmet": "^3.10.0",
